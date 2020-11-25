@@ -12,7 +12,7 @@ namespace VideoRental
 {
     public partial class VideoRental : Form
     {
-       databaseClass Obj_Data = new databaseClass();
+        databaseClass Obj_Data = new databaseClass();
         public VideoRental()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace VideoRental
                 MessageBox.Show(ex.Message);
             }
         }
-             public void Movies_Load()
+        public void Movies_Load()
         {
             DGV_Movie.DataSource = null;
             try
@@ -46,13 +46,13 @@ namespace VideoRental
                 MessageBox.Show(ex.Message);
             }
         }
-       public void Rental_Load()
+        public void Rental_Load()
         {
-            global::VideoRental.DGV_Rental.DataSource = null;
+            DGV_Rental.DataSource = null;
             try
             {
-                global::VideoRental.DGV_Rental.DataSource = Obj_Data.FillRental_Data();
-                global::VideoRental.DGV_Rental.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                DGV_Rental.DataSource = Obj_Data.FillRental_Data();
+                DGV_Rental.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             }
             catch (Exception ex)
             {
@@ -60,30 +60,73 @@ namespace VideoRental
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void Add_customer_details_Click(object sender, EventArgs e)
         {
-
+            if (First_Name_Text.Text != "" && Last_Name_Text.Text != "" && Address_Text.Text != "" && Phone_Text.Text != "")
+            {
+                string message = Obj_Data.CustomerInsert(First_Name_Text.Text, Last_Name_Text.Text, Phone_Text.Text, Address_Text.Text);
+                MessageBox.Show(message);
+                First_Name_Text.Text = "";
+                Last_Name_Text.Text = "";
+                Phone_Text.Text = "";
+                Address_Text.Text = "";
+                Customer_Load();
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the details properly and press Add button");
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+
+        private void DGV_Customer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string newvalue = DGV_Customer.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                this.Text = "Row : " + e.RowIndex.ToString() + " Col : " + e.ColumnIndex.ToString() + " Value = " + newvalue;
+                Obj_Data.CustomerID = Convert.ToInt32(DGV_Customer.Rows[e.RowIndex].Cells[0].Value);
+                First_Name_Text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
+                Last_Name_Text.Text = DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
+                Phone_Text.Text = DGV_Customer.Rows[e.RowIndex].Cells[4].Value.ToString();
+                Address_Text.Text = DGV_Customer.Rows[e.RowIndex].Cells[3].Value.ToString();
+                custname_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("somthing wrong", ex.Message);
+            }
+        }
+    
+        private void update_customer_details_Click(object sender, EventArgs e)
+        {
+            if (First_Name_Text.Text != "" && Last_Name_Text.Text != "" && Address_Text.Text != "" && Phone_Text.Text != "")
+            {
+                string message = Obj_Data.CustomerUpdate(First_Name_Text.Text, Last_Name_Text.Text, Phone_Text.Text, Address_Text.Text);
+                MessageBox.Show(message);
+                First_Name_Text.Text = "";
+                Last_Name_Text.Text = "";
+                Phone_Text.Text = "";
+                Address_Text.Text = "";
+                Customer_Load();
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fileds then press Add button");
+            }
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void Delete_customer_details_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Title_Click(object sender, EventArgs e)
-        {
-
+            string message = Obj_Data.CustomerDelete();
+            MessageBox.Show(message);
+            First_Name_Text.Text = "";
+            Last_Name_Text.Text = "";
+            Phone_Text.Text = "";
+            Address_Text.Text = "";
+            Customer_Load();
         }
     }
-}
+    }
  

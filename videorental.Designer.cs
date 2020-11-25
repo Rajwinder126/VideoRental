@@ -35,53 +35,53 @@
             this.DGV_Movie = new System.Windows.Forms.DataGridView();
             this.Rent_tab = new System.Windows.Forms.TabPage();
             this.DGV_Rental = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Moive_penal = new System.Windows.Forms.PictureBox();
+            this.customer_penal = new System.Windows.Forms.PictureBox();
+            this.Customer_details = new System.Windows.Forms.TextBox();
+            this.Add_customer_details = new System.Windows.Forms.Button();
+            this.Delete_customer_details = new System.Windows.Forms.Button();
+            this.update_customer_details = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Year = new System.Windows.Forms.Label();
-            this.Rental_cost = new System.Windows.Forms.Label();
-            this.Copies = new System.Windows.Forms.Label();
-            this.Polt = new System.Windows.Forms.Label();
-            this.Genre = new System.Windows.Forms.Label();
-            this.Rating = new System.Windows.Forms.Label();
-            this.Title = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.MovieIDFK = new System.Windows.Forms.Label();
-            this.CustIDFK = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
-            this.Delete = new System.Windows.Forms.Button();
-            this.Update = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.Year_label = new System.Windows.Forms.Label();
+            this.Rental_cost_label = new System.Windows.Forms.Label();
+            this.Copies_label = new System.Windows.Forms.Label();
+            this.Polt_label = new System.Windows.Forms.Label();
+            this.Genre_label = new System.Windows.Forms.Label();
+            this.Rating_label = new System.Windows.Forms.Label();
+            this.Title_label = new System.Windows.Forms.Label();
+            this.Rental_penal = new System.Windows.Forms.PictureBox();
+            this.Moviename_label = new System.Windows.Forms.Label();
+            this.Custname_label = new System.Windows.Forms.Label();
+            this.Date_rented_label = new System.Windows.Forms.Label();
+            this.Date_returned_label = new System.Windows.Forms.Label();
+            this.movie_details = new System.Windows.Forms.TextBox();
+            this.Rental_details = new System.Windows.Forms.TextBox();
+            this.First_name_label = new System.Windows.Forms.Label();
+            this.Last_name_label = new System.Windows.Forms.Label();
+            this.Address_label = new System.Windows.Forms.Label();
+            this.Phone_label = new System.Windows.Forms.Label();
+            this.Add_rental_details = new System.Windows.Forms.Button();
+            this.Delete_rental_details = new System.Windows.Forms.Button();
+            this.update_rental_details = new System.Windows.Forms.Button();
+            this.Add_moive_details = new System.Windows.Forms.Button();
+            this.Delete_movie_details = new System.Windows.Forms.Button();
+            this.Update_moive_details = new System.Windows.Forms.Button();
+            this.First_Name_Text = new System.Windows.Forms.TextBox();
+            this.Last_Name_Text = new System.Windows.Forms.TextBox();
+            this.Address_Text = new System.Windows.Forms.TextBox();
+            this.Phone_Text = new System.Windows.Forms.TextBox();
+            this.moviename_text = new System.Windows.Forms.TextBox();
+            this.custname_text = new System.Windows.Forms.TextBox();
+            this.Rating_text = new System.Windows.Forms.TextBox();
+            this.Title_text = new System.Windows.Forms.TextBox();
+            this.Year_text = new System.Windows.Forms.TextBox();
+            this.Rental_cost_text = new System.Windows.Forms.TextBox();
+            this.copies_text = new System.Windows.Forms.TextBox();
+            this.polt_text = new System.Windows.Forms.TextBox();
+            this.genre_text = new System.Windows.Forms.TextBox();
+            this.date_returned_text = new System.Windows.Forms.DateTimePicker();
+            this.date_rented_text = new System.Windows.Forms.DateTimePicker();
             this.tab_control.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Customer)).BeginInit();
@@ -89,9 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Movie)).BeginInit();
             this.Rent_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Rental)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Moive_penal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customer_penal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rental_penal)).BeginInit();
             this.SuspendLayout();
             // 
             // tab_control
@@ -123,6 +123,8 @@
             this.DGV_Customer.Name = "DGV_Customer";
             this.DGV_Customer.Size = new System.Drawing.Size(489, 241);
             this.DGV_Customer.TabIndex = 0;
+            this.DGV_Customer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Customer_CellContentClick);
+            this.DGV_Customer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Customer_CellContentClick);
             // 
             // tabPage2
             // 
@@ -162,60 +164,63 @@
             this.DGV_Rental.Size = new System.Drawing.Size(481, 241);
             this.DGV_Rental.TabIndex = 0;
             // 
-            // pictureBox1
+            // Moive_penal
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pictureBox1.Location = new System.Drawing.Point(536, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 300);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.Moive_penal.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Moive_penal.Location = new System.Drawing.Point(536, 62);
+            this.Moive_penal.Name = "Moive_penal";
+            this.Moive_penal.Size = new System.Drawing.Size(317, 311);
+            this.Moive_penal.TabIndex = 1;
+            this.Moive_penal.TabStop = false;
             // 
-            // pictureBox2
+            // customer_penal
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DarkGray;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 346);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(402, 306);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.customer_penal.BackColor = System.Drawing.Color.DarkGray;
+            this.customer_penal.Location = new System.Drawing.Point(23, 346);
+            this.customer_penal.Name = "customer_penal";
+            this.customer_penal.Size = new System.Drawing.Size(402, 321);
+            this.customer_penal.TabIndex = 2;
+            this.customer_penal.TabStop = false;
             // 
-            // textBox1
+            // Customer_details
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gold;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(210, 363);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 24);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Customer Details";
+            this.Customer_details.BackColor = System.Drawing.Color.Gold;
+            this.Customer_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Customer_details.Location = new System.Drawing.Point(160, 366);
+            this.Customer_details.Name = "Customer_details";
+            this.Customer_details.Size = new System.Drawing.Size(143, 24);
+            this.Customer_details.TabIndex = 3;
+            this.Customer_details.Text = "Customer Details";
             // 
-            // button1
+            // Add_customer_details
             // 
-            this.button1.Location = new System.Drawing.Point(23, 629);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Add_customer_details.Location = new System.Drawing.Point(33, 629);
+            this.Add_customer_details.Name = "Add_customer_details";
+            this.Add_customer_details.Size = new System.Drawing.Size(75, 23);
+            this.Add_customer_details.TabIndex = 8;
+            this.Add_customer_details.Text = "Add";
+            this.Add_customer_details.UseVisualStyleBackColor = true;
+            this.Add_customer_details.Click += new System.EventHandler(this.Add_customer_details_Click);
             // 
-            // button2
+            // Delete_customer_details
             // 
-            this.button2.Location = new System.Drawing.Point(160, 629);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Delete_customer_details.Location = new System.Drawing.Point(330, 629);
+            this.Delete_customer_details.Name = "Delete_customer_details";
+            this.Delete_customer_details.Size = new System.Drawing.Size(75, 23);
+            this.Delete_customer_details.TabIndex = 9;
+            this.Delete_customer_details.Text = "Delete";
+            this.Delete_customer_details.UseVisualStyleBackColor = true;
+            this.Delete_customer_details.Click += new System.EventHandler(this.Delete_customer_details_Click);
             // 
-            // button3
+            // update_customer_details
             // 
-            this.button3.Location = new System.Drawing.Point(307, 629);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
+            this.update_customer_details.Location = new System.Drawing.Point(177, 629);
+            this.update_customer_details.Name = "update_customer_details";
+            this.update_customer_details.Size = new System.Drawing.Size(75, 23);
+            this.update_customer_details.TabIndex = 10;
+            this.update_customer_details.Text = "Update";
+            this.update_customer_details.UseVisualStyleBackColor = true;
+            this.update_customer_details.Click += new System.EventHandler(this.update_customer_details_Click);
             // 
             // label2
             // 
@@ -235,361 +240,358 @@
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 13;
             // 
-            // Year
-            // 
-            this.Year.AutoSize = true;
-            this.Year.BackColor = System.Drawing.Color.DarkGray;
-            this.Year.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Year.Location = new System.Drawing.Point(574, 166);
-            this.Year.Name = "Year";
-            this.Year.Size = new System.Drawing.Size(32, 15);
-            this.Year.TabIndex = 14;
-            this.Year.Text = "Year";
-            // 
-            // Rental_cost
-            // 
-            this.Rental_cost.AutoSize = true;
-            this.Rental_cost.BackColor = System.Drawing.Color.DarkGray;
-            this.Rental_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rental_cost.Location = new System.Drawing.Point(574, 195);
-            this.Rental_cost.Name = "Rental_cost";
-            this.Rental_cost.Size = new System.Drawing.Size(72, 15);
-            this.Rental_cost.TabIndex = 15;
-            this.Rental_cost.Text = "Rental_cost";
-            // 
-            // Copies
-            // 
-            this.Copies.AutoSize = true;
-            this.Copies.BackColor = System.Drawing.Color.DarkGray;
-            this.Copies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Copies.Location = new System.Drawing.Point(574, 224);
-            this.Copies.Name = "Copies";
-            this.Copies.Size = new System.Drawing.Size(45, 15);
-            this.Copies.TabIndex = 16;
-            this.Copies.Text = "Copies";
-            // 
-            // Polt
-            // 
-            this.Polt.AutoSize = true;
-            this.Polt.BackColor = System.Drawing.Color.DarkGray;
-            this.Polt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Polt.Location = new System.Drawing.Point(574, 253);
-            this.Polt.Name = "Polt";
-            this.Polt.Size = new System.Drawing.Size(28, 15);
-            this.Polt.TabIndex = 17;
-            this.Polt.Text = "Polt";
-            // 
-            // Genre
-            // 
-            this.Genre.AutoSize = true;
-            this.Genre.BackColor = System.Drawing.Color.DarkGray;
-            this.Genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Genre.Location = new System.Drawing.Point(574, 285);
-            this.Genre.Name = "Genre";
-            this.Genre.Size = new System.Drawing.Size(41, 15);
-            this.Genre.TabIndex = 18;
-            this.Genre.Text = "Genre";
-            // 
-            // Rating
-            // 
-            this.Rating.AutoSize = true;
-            this.Rating.BackColor = System.Drawing.Color.DarkGray;
-            this.Rating.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rating.Location = new System.Drawing.Point(574, 101);
-            this.Rating.Name = "Rating";
-            this.Rating.Size = new System.Drawing.Size(43, 15);
-            this.Rating.TabIndex = 19;
-            this.Rating.Text = "Rating";
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.BackColor = System.Drawing.Color.DarkGray;
-            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(574, 133);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(30, 15);
-            this.Title.TabIndex = 20;
-            this.Title.Text = "Title";
-            this.Title.Click += new System.EventHandler(this.Title_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.DarkGray;
-            this.pictureBox3.Location = new System.Drawing.Point(465, 388);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(377, 264);
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
-            // 
-            // MovieIDFK
-            // 
-            this.MovieIDFK.AutoSize = true;
-            this.MovieIDFK.BackColor = System.Drawing.Color.DarkGray;
-            this.MovieIDFK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MovieIDFK.Location = new System.Drawing.Point(488, 446);
-            this.MovieIDFK.Name = "MovieIDFK";
-            this.MovieIDFK.Size = new System.Drawing.Size(67, 15);
-            this.MovieIDFK.TabIndex = 23;
-            this.MovieIDFK.Text = "MovieIDFK";
-            // 
-            // CustIDFK
-            // 
-            this.CustIDFK.AutoSize = true;
-            this.CustIDFK.BackColor = System.Drawing.Color.DarkGray;
-            this.CustIDFK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustIDFK.Location = new System.Drawing.Point(488, 493);
-            this.CustIDFK.Name = "CustIDFK";
-            this.CustIDFK.Size = new System.Drawing.Size(58, 15);
-            this.CustIDFK.TabIndex = 24;
-            this.CustIDFK.Text = "CustIDFK";
-            this.CustIDFK.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.DarkGray;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(488, 539);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 15);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "Date Rented";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.DarkGray;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(488, 585);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 15);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Date Returned";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.Gold;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(625, 68);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(110, 24);
-            this.textBox6.TabIndex = 27;
-            this.textBox6.Text = "Movie Details";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Gold;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(625, 401);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 27);
-            this.textBox7.TabIndex = 28;
-            this.textBox7.Text = "Rental Details";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkGray;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 425);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "First Name";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DarkGray;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(57, 484);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 15);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Last Name";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.DarkGray;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(57, 539);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 15);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "Address";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.DarkGray;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(56, 594);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(43, 15);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "Phone";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(480, 629);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(609, 629);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 34;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(749, 629);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 35;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // Add
-            // 
-            this.Add.Location = new System.Drawing.Point(553, 339);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(75, 23);
-            this.Add.TabIndex = 36;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
-            // 
-            // Delete
-            // 
-            this.Delete.Location = new System.Drawing.Point(660, 339);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 37;
-            this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = true;
-            this.Delete.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // Update
-            // 
-            this.Update.Location = new System.Drawing.Point(767, 339);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 38;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(265, 424);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 39;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(265, 488);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 40;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(265, 538);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 41;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(265, 593);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 42;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(679, 446);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 43;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(679, 493);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 44;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(679, 539);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 45;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(679, 585);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 46;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(724, 96);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 47;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(724, 133);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 48;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(724, 166);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 49;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(724, 195);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 50;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(724, 224);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 51;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(724, 253);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 52;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(724, 285);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 53;
+            // Year_label
+            // 
+            this.Year_label.AutoSize = true;
+            this.Year_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Year_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Year_label.Location = new System.Drawing.Point(574, 166);
+            this.Year_label.Name = "Year_label";
+            this.Year_label.Size = new System.Drawing.Size(32, 15);
+            this.Year_label.TabIndex = 14;
+            this.Year_label.Text = "Year";
+            // 
+            // Rental_cost_label
+            // 
+            this.Rental_cost_label.AutoSize = true;
+            this.Rental_cost_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Rental_cost_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rental_cost_label.Location = new System.Drawing.Point(574, 195);
+            this.Rental_cost_label.Name = "Rental_cost_label";
+            this.Rental_cost_label.Size = new System.Drawing.Size(72, 15);
+            this.Rental_cost_label.TabIndex = 15;
+            this.Rental_cost_label.Text = "Rental_cost";
+            // 
+            // Copies_label
+            // 
+            this.Copies_label.AutoSize = true;
+            this.Copies_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Copies_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Copies_label.Location = new System.Drawing.Point(574, 224);
+            this.Copies_label.Name = "Copies_label";
+            this.Copies_label.Size = new System.Drawing.Size(45, 15);
+            this.Copies_label.TabIndex = 16;
+            this.Copies_label.Text = "Copies";
+            // 
+            // Polt_label
+            // 
+            this.Polt_label.AutoSize = true;
+            this.Polt_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Polt_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Polt_label.Location = new System.Drawing.Point(574, 253);
+            this.Polt_label.Name = "Polt_label";
+            this.Polt_label.Size = new System.Drawing.Size(28, 15);
+            this.Polt_label.TabIndex = 17;
+            this.Polt_label.Text = "Polt";
+            // 
+            // Genre_label
+            // 
+            this.Genre_label.AutoSize = true;
+            this.Genre_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Genre_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Genre_label.Location = new System.Drawing.Point(574, 285);
+            this.Genre_label.Name = "Genre_label";
+            this.Genre_label.Size = new System.Drawing.Size(41, 15);
+            this.Genre_label.TabIndex = 18;
+            this.Genre_label.Text = "Genre";
+            // 
+            // Rating_label
+            // 
+            this.Rating_label.AutoSize = true;
+            this.Rating_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Rating_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rating_label.Location = new System.Drawing.Point(574, 101);
+            this.Rating_label.Name = "Rating_label";
+            this.Rating_label.Size = new System.Drawing.Size(43, 15);
+            this.Rating_label.TabIndex = 19;
+            this.Rating_label.Text = "Rating";
+            // 
+            // Title_label
+            // 
+            this.Title_label.AutoSize = true;
+            this.Title_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Title_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title_label.Location = new System.Drawing.Point(574, 133);
+            this.Title_label.Name = "Title_label";
+            this.Title_label.Size = new System.Drawing.Size(30, 15);
+            this.Title_label.TabIndex = 20;
+            this.Title_label.Text = "Title";
+            // 
+            // Rental_penal
+            // 
+            this.Rental_penal.BackColor = System.Drawing.Color.DarkGray;
+            this.Rental_penal.Location = new System.Drawing.Point(480, 388);
+            this.Rental_penal.Name = "Rental_penal";
+            this.Rental_penal.Size = new System.Drawing.Size(377, 279);
+            this.Rental_penal.TabIndex = 21;
+            this.Rental_penal.TabStop = false;
+            // 
+            // Moviename_label
+            // 
+            this.Moviename_label.AutoSize = true;
+            this.Moviename_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Moviename_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Moviename_label.Location = new System.Drawing.Point(488, 446);
+            this.Moviename_label.Name = "Moviename_label";
+            this.Moviename_label.Size = new System.Drawing.Size(72, 15);
+            this.Moviename_label.TabIndex = 23;
+            this.Moviename_label.Text = "Moviename";
+            // 
+            // Custname_label
+            // 
+            this.Custname_label.AutoSize = true;
+            this.Custname_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Custname_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Custname_label.Location = new System.Drawing.Point(488, 493);
+            this.Custname_label.Name = "Custname_label";
+            this.Custname_label.Size = new System.Drawing.Size(97, 15);
+            this.Custname_label.TabIndex = 24;
+            this.Custname_label.Text = "Customer Name";
+            // 
+            // Date_rented_label
+            // 
+            this.Date_rented_label.AutoSize = true;
+            this.Date_rented_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Date_rented_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_rented_label.Location = new System.Drawing.Point(488, 539);
+            this.Date_rented_label.Name = "Date_rented_label";
+            this.Date_rented_label.Size = new System.Drawing.Size(76, 15);
+            this.Date_rented_label.TabIndex = 25;
+            this.Date_rented_label.Text = "Date Rented";
+            // 
+            // Date_returned_label
+            // 
+            this.Date_returned_label.AutoSize = true;
+            this.Date_returned_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Date_returned_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_returned_label.Location = new System.Drawing.Point(488, 585);
+            this.Date_returned_label.Name = "Date_returned_label";
+            this.Date_returned_label.Size = new System.Drawing.Size(87, 15);
+            this.Date_returned_label.TabIndex = 26;
+            this.Date_returned_label.Text = "Date Returned";
+            // 
+            // movie_details
+            // 
+            this.movie_details.BackColor = System.Drawing.Color.Gold;
+            this.movie_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movie_details.Location = new System.Drawing.Point(625, 68);
+            this.movie_details.Name = "movie_details";
+            this.movie_details.Size = new System.Drawing.Size(110, 24);
+            this.movie_details.TabIndex = 27;
+            this.movie_details.Text = "Movie Details";
+            // 
+            // Rental_details
+            // 
+            this.Rental_details.BackColor = System.Drawing.Color.Gold;
+            this.Rental_details.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rental_details.Location = new System.Drawing.Point(625, 401);
+            this.Rental_details.Name = "Rental_details";
+            this.Rental_details.Size = new System.Drawing.Size(121, 27);
+            this.Rental_details.TabIndex = 28;
+            this.Rental_details.Text = "Rental Details";
+            // 
+            // First_name_label
+            // 
+            this.First_name_label.AutoSize = true;
+            this.First_name_label.BackColor = System.Drawing.Color.DarkGray;
+            this.First_name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.First_name_label.Location = new System.Drawing.Point(56, 425);
+            this.First_name_label.Name = "First_name_label";
+            this.First_name_label.Size = new System.Drawing.Size(67, 15);
+            this.First_name_label.TabIndex = 29;
+            this.First_name_label.Text = "First Name";
+            // 
+            // Last_name_label
+            // 
+            this.Last_name_label.AutoSize = true;
+            this.Last_name_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Last_name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Last_name_label.Location = new System.Drawing.Point(57, 484);
+            this.Last_name_label.Name = "Last_name_label";
+            this.Last_name_label.Size = new System.Drawing.Size(67, 15);
+            this.Last_name_label.TabIndex = 30;
+            this.Last_name_label.Text = "Last Name";
+            // 
+            // Address_label
+            // 
+            this.Address_label.AutoSize = true;
+            this.Address_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Address_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address_label.Location = new System.Drawing.Point(57, 539);
+            this.Address_label.Name = "Address_label";
+            this.Address_label.Size = new System.Drawing.Size(51, 15);
+            this.Address_label.TabIndex = 31;
+            this.Address_label.Text = "Address";
+            // 
+            // Phone_label
+            // 
+            this.Phone_label.AutoSize = true;
+            this.Phone_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Phone_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phone_label.Location = new System.Drawing.Point(56, 594);
+            this.Phone_label.Name = "Phone_label";
+            this.Phone_label.Size = new System.Drawing.Size(43, 15);
+            this.Phone_label.TabIndex = 32;
+            this.Phone_label.Text = "Phone";
+            // 
+            // Add_rental_details
+            // 
+            this.Add_rental_details.Location = new System.Drawing.Point(489, 629);
+            this.Add_rental_details.Name = "Add_rental_details";
+            this.Add_rental_details.Size = new System.Drawing.Size(75, 23);
+            this.Add_rental_details.TabIndex = 33;
+            this.Add_rental_details.Text = "Add";
+            this.Add_rental_details.UseVisualStyleBackColor = true;
+            // 
+            // Delete_rental_details
+            // 
+            this.Delete_rental_details.Location = new System.Drawing.Point(767, 629);
+            this.Delete_rental_details.Name = "Delete_rental_details";
+            this.Delete_rental_details.Size = new System.Drawing.Size(75, 23);
+            this.Delete_rental_details.TabIndex = 34;
+            this.Delete_rental_details.Text = "Delete";
+            this.Delete_rental_details.UseVisualStyleBackColor = true;
+            // 
+            // update_rental_details
+            // 
+            this.update_rental_details.Location = new System.Drawing.Point(625, 629);
+            this.update_rental_details.Name = "update_rental_details";
+            this.update_rental_details.Size = new System.Drawing.Size(75, 23);
+            this.update_rental_details.TabIndex = 35;
+            this.update_rental_details.Text = "Update";
+            this.update_rental_details.UseVisualStyleBackColor = true;
+            // 
+            // Add_moive_details
+            // 
+            this.Add_moive_details.Location = new System.Drawing.Point(554, 328);
+            this.Add_moive_details.Name = "Add_moive_details";
+            this.Add_moive_details.Size = new System.Drawing.Size(75, 23);
+            this.Add_moive_details.TabIndex = 36;
+            this.Add_moive_details.Text = "Add";
+            this.Add_moive_details.UseVisualStyleBackColor = true;
+            // 
+            // Delete_movie_details
+            // 
+            this.Delete_movie_details.Location = new System.Drawing.Point(767, 328);
+            this.Delete_movie_details.Name = "Delete_movie_details";
+            this.Delete_movie_details.Size = new System.Drawing.Size(75, 23);
+            this.Delete_movie_details.TabIndex = 37;
+            this.Delete_movie_details.Text = "Delete";
+            this.Delete_movie_details.UseVisualStyleBackColor = true;
+            // 
+            // Update_moive_details
+            // 
+            this.Update_moive_details.Location = new System.Drawing.Point(660, 328);
+            this.Update_moive_details.Name = "Update_moive_details";
+            this.Update_moive_details.Size = new System.Drawing.Size(75, 23);
+            this.Update_moive_details.TabIndex = 38;
+            this.Update_moive_details.Text = "Update";
+            this.Update_moive_details.UseVisualStyleBackColor = true;
+            // 
+            // First_Name_Text
+            // 
+            this.First_Name_Text.Location = new System.Drawing.Point(265, 424);
+            this.First_Name_Text.Name = "First_Name_Text";
+            this.First_Name_Text.Size = new System.Drawing.Size(100, 20);
+            this.First_Name_Text.TabIndex = 39;
+            // 
+            // Last_Name_Text
+            // 
+            this.Last_Name_Text.Location = new System.Drawing.Point(265, 488);
+            this.Last_Name_Text.Name = "Last_Name_Text";
+            this.Last_Name_Text.Size = new System.Drawing.Size(100, 20);
+            this.Last_Name_Text.TabIndex = 40;
+            // 
+            // Address_Text
+            // 
+            this.Address_Text.Location = new System.Drawing.Point(265, 538);
+            this.Address_Text.Name = "Address_Text";
+            this.Address_Text.Size = new System.Drawing.Size(100, 20);
+            this.Address_Text.TabIndex = 41;
+            // 
+            // Phone_Text
+            // 
+            this.Phone_Text.Location = new System.Drawing.Point(265, 593);
+            this.Phone_Text.Name = "Phone_Text";
+            this.Phone_Text.Size = new System.Drawing.Size(100, 20);
+            this.Phone_Text.TabIndex = 42;
+            // 
+            // moviename_text
+            // 
+            this.moviename_text.Location = new System.Drawing.Point(724, 446);
+            this.moviename_text.Name = "moviename_text";
+            this.moviename_text.Size = new System.Drawing.Size(100, 20);
+            this.moviename_text.TabIndex = 43;
+            // 
+            // custname_text
+            // 
+            this.custname_text.Location = new System.Drawing.Point(724, 492);
+            this.custname_text.Name = "custname_text";
+            this.custname_text.Size = new System.Drawing.Size(100, 20);
+            this.custname_text.TabIndex = 44;
+            // 
+            // Rating_text
+            // 
+            this.Rating_text.Location = new System.Drawing.Point(724, 96);
+            this.Rating_text.Name = "Rating_text";
+            this.Rating_text.Size = new System.Drawing.Size(100, 20);
+            this.Rating_text.TabIndex = 47;
+            // 
+            // Title_text
+            // 
+            this.Title_text.Location = new System.Drawing.Point(724, 133);
+            this.Title_text.Name = "Title_text";
+            this.Title_text.Size = new System.Drawing.Size(100, 20);
+            this.Title_text.TabIndex = 48;
+            // 
+            // Year_text
+            // 
+            this.Year_text.Location = new System.Drawing.Point(724, 166);
+            this.Year_text.Name = "Year_text";
+            this.Year_text.Size = new System.Drawing.Size(100, 20);
+            this.Year_text.TabIndex = 49;
+            // 
+            // Rental_cost_text
+            // 
+            this.Rental_cost_text.Location = new System.Drawing.Point(724, 195);
+            this.Rental_cost_text.Name = "Rental_cost_text";
+            this.Rental_cost_text.Size = new System.Drawing.Size(100, 20);
+            this.Rental_cost_text.TabIndex = 50;
+            // 
+            // copies_text
+            // 
+            this.copies_text.Location = new System.Drawing.Point(724, 224);
+            this.copies_text.Name = "copies_text";
+            this.copies_text.Size = new System.Drawing.Size(100, 20);
+            this.copies_text.TabIndex = 51;
+            // 
+            // polt_text
+            // 
+            this.polt_text.Location = new System.Drawing.Point(724, 253);
+            this.polt_text.Name = "polt_text";
+            this.polt_text.Size = new System.Drawing.Size(100, 20);
+            this.polt_text.TabIndex = 52;
+            // 
+            // genre_text
+            // 
+            this.genre_text.Location = new System.Drawing.Point(724, 285);
+            this.genre_text.Name = "genre_text";
+            this.genre_text.Size = new System.Drawing.Size(100, 20);
+            this.genre_text.TabIndex = 53;
+            // 
+            // date_returned_text
+            // 
+            this.date_returned_text.Location = new System.Drawing.Point(625, 585);
+            this.date_returned_text.Name = "date_returned_text";
+            this.date_returned_text.Size = new System.Drawing.Size(200, 20);
+            this.date_returned_text.TabIndex = 54;
+            // 
+            // date_rented_text
+            // 
+            this.date_rented_text.Location = new System.Drawing.Point(625, 535);
+            this.date_rented_text.Name = "date_rented_text";
+            this.date_rented_text.Size = new System.Drawing.Size(200, 20);
+            this.date_rented_text.TabIndex = 55;
             // 
             // VideoRental
             // 
@@ -597,53 +599,53 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(876, 679);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.Update);
-            this.Controls.Add(this.Delete);
-            this.Controls.Add(this.Add);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.CustIDFK);
-            this.Controls.Add(this.MovieIDFK);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.Title);
-            this.Controls.Add(this.Rating);
-            this.Controls.Add(this.Genre);
-            this.Controls.Add(this.Polt);
-            this.Controls.Add(this.Copies);
-            this.Controls.Add(this.Rental_cost);
-            this.Controls.Add(this.Year);
+            this.Controls.Add(this.date_rented_text);
+            this.Controls.Add(this.date_returned_text);
+            this.Controls.Add(this.genre_text);
+            this.Controls.Add(this.polt_text);
+            this.Controls.Add(this.copies_text);
+            this.Controls.Add(this.Rental_cost_text);
+            this.Controls.Add(this.Year_text);
+            this.Controls.Add(this.Title_text);
+            this.Controls.Add(this.Rating_text);
+            this.Controls.Add(this.custname_text);
+            this.Controls.Add(this.moviename_text);
+            this.Controls.Add(this.Phone_Text);
+            this.Controls.Add(this.Address_Text);
+            this.Controls.Add(this.Last_Name_Text);
+            this.Controls.Add(this.First_Name_Text);
+            this.Controls.Add(this.Update_moive_details);
+            this.Controls.Add(this.Delete_movie_details);
+            this.Controls.Add(this.Add_moive_details);
+            this.Controls.Add(this.update_rental_details);
+            this.Controls.Add(this.Delete_rental_details);
+            this.Controls.Add(this.Add_rental_details);
+            this.Controls.Add(this.Phone_label);
+            this.Controls.Add(this.Address_label);
+            this.Controls.Add(this.Last_name_label);
+            this.Controls.Add(this.First_name_label);
+            this.Controls.Add(this.Rental_details);
+            this.Controls.Add(this.movie_details);
+            this.Controls.Add(this.Date_returned_label);
+            this.Controls.Add(this.Date_rented_label);
+            this.Controls.Add(this.Custname_label);
+            this.Controls.Add(this.Moviename_label);
+            this.Controls.Add(this.Rental_penal);
+            this.Controls.Add(this.Title_label);
+            this.Controls.Add(this.Rating_label);
+            this.Controls.Add(this.Genre_label);
+            this.Controls.Add(this.Polt_label);
+            this.Controls.Add(this.Copies_label);
+            this.Controls.Add(this.Rental_cost_label);
+            this.Controls.Add(this.Year_label);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.update_customer_details);
+            this.Controls.Add(this.Delete_customer_details);
+            this.Controls.Add(this.Add_customer_details);
+            this.Controls.Add(this.Customer_details);
+            this.Controls.Add(this.customer_penal);
+            this.Controls.Add(this.Moive_penal);
             this.Controls.Add(this.tab_control);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "VideoRental";
@@ -655,9 +657,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Movie)).EndInit();
             this.Rent_tab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Rental)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Moive_penal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customer_penal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rental_penal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,53 +674,53 @@
         private System.Windows.Forms.DataGridView DGV_Movie;
         private System.Windows.Forms.TabPage Rent_tab;
         private System.Windows.Forms.DataGridView DGV_Rental;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox Moive_penal;
+        private System.Windows.Forms.PictureBox customer_penal;
+        private System.Windows.Forms.TextBox Customer_details;
+        private System.Windows.Forms.Button Add_customer_details;
+        private System.Windows.Forms.Button Delete_customer_details;
+        private System.Windows.Forms.Button update_customer_details;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label Year;
-        private System.Windows.Forms.Label Rental_cost;
-        private System.Windows.Forms.Label Copies;
-        private System.Windows.Forms.Label Polt;
-        private System.Windows.Forms.Label Genre;
-        private System.Windows.Forms.Label Rating;
-        private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label MovieIDFK;
-        private System.Windows.Forms.Label CustIDFK;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.Button Update;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label Year_label;
+        private System.Windows.Forms.Label Rental_cost_label;
+        private System.Windows.Forms.Label Copies_label;
+        private System.Windows.Forms.Label Polt_label;
+        private System.Windows.Forms.Label Genre_label;
+        private System.Windows.Forms.Label Rating_label;
+        private System.Windows.Forms.Label Title_label;
+        private System.Windows.Forms.PictureBox Rental_penal;
+        private System.Windows.Forms.Label Moviename_label;
+        private System.Windows.Forms.Label Custname_label;
+        private System.Windows.Forms.Label Date_rented_label;
+        private System.Windows.Forms.Label Date_returned_label;
+        private System.Windows.Forms.TextBox movie_details;
+        private System.Windows.Forms.TextBox Rental_details;
+        private System.Windows.Forms.Label First_name_label;
+        private System.Windows.Forms.Label Last_name_label;
+        private System.Windows.Forms.Label Address_label;
+        private System.Windows.Forms.Label Phone_label;
+        private System.Windows.Forms.Button Add_rental_details;
+        private System.Windows.Forms.Button Delete_rental_details;
+        private System.Windows.Forms.Button update_rental_details;
+        private System.Windows.Forms.Button Add_moive_details;
+        private System.Windows.Forms.Button Delete_movie_details;
+        private System.Windows.Forms.Button Update_moive_details;
+        private System.Windows.Forms.TextBox First_Name_Text;
+        private System.Windows.Forms.TextBox Last_Name_Text;
+        private System.Windows.Forms.TextBox Address_Text;
+        private System.Windows.Forms.TextBox Phone_Text;
+        private System.Windows.Forms.TextBox moviename_text;
+        private System.Windows.Forms.TextBox custname_text;
+        private System.Windows.Forms.TextBox Rating_text;
+        private System.Windows.Forms.TextBox Title_text;
+        private System.Windows.Forms.TextBox Year_text;
+        private System.Windows.Forms.TextBox Rental_cost_text;
+        private System.Windows.Forms.TextBox copies_text;
+        private System.Windows.Forms.TextBox polt_text;
+        private System.Windows.Forms.TextBox genre_text;
+        private System.Windows.Forms.DateTimePicker date_returned_text;
+        private System.Windows.Forms.DateTimePicker date_rented_text;
     }
 }
 
