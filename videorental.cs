@@ -98,7 +98,7 @@ namespace VideoRental
                 MessageBox.Show("somthing wrong", ex.Message);
             }
         }
-    
+
         private void update_customer_details_Click(object sender, EventArgs e)
         {
             if (First_Name_Text.Text != "" && Last_Name_Text.Text != "" && Address_Text.Text != "" && Phone_Text.Text != "")
@@ -113,7 +113,7 @@ namespace VideoRental
             }
             else
             {
-                MessageBox.Show("Please fill all the fileds then press Add button");
+                MessageBox.Show("Please fill all the fileds then press update button");
             }
         }
 
@@ -127,6 +127,57 @@ namespace VideoRental
             Address_Text.Text = "";
             Customer_Load();
         }
+
+        private void Add_moive_details_Click(object sender, EventArgs e)
+        {
+            {
+                if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text != "" && Rental_cost_text.Text != "" && copies_text.Text != "" && polt_text.Text != "" && genre_text.Text != "")
+                {
+                    string message = Obj_Data.MoviesInsert(Title_text.Text, Year_text.Text, Rental_cost_text.Text, polt_text.Text, genre_text.Text);
+                    MessageBox.Show(message);
+                    Title_text.Text = "";
+                    Year_text.Text = "";
+                    Rental_cost_text.Text = "";
+                    polt_text.Text = "";
+                    genre_text.Text = "";
+
+                    Movies_Load();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill all the details properly and press Add button");
+                }
+
+            }
+        }
+        
+
+
+            private void DGV_C_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            {
+                try
+                {
+                    string newvalue = DGV_Customer.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    this.Text = "Row : " + e.RowIndex.ToString() + " Col : " + e.ColumnIndex.ToString() + " Value = " + newvalue;
+                    Obj_Data.CustomerID = Convert.ToInt32(DGV_Customer.Rows[e.RowIndex].Cells[0].Value);
+                    Rating_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    Title_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    Year_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    Rental_cost_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    polt_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    genre_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
+                   
+                   
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("somthing wrong", ex.Message);
+                }
+            }
+
+        }
     }
-    }
- 
+    
+
+
+

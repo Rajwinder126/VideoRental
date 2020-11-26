@@ -15,7 +15,7 @@ namespace VideoRental
         private SqlDataReader Data_Reader;
         private SqlDataAdapter da = new SqlDataAdapter();
         string QueryString;
-        public int CustomerID;
+        public int CustomerID,MoviesID;
         public databaseClass()
         {
             string ConnString = @"Data Source=LAPTOP-37GT9VB1\SQLEXPRESS01;Initial Catalog=video_rental;Integrated Security=True";
@@ -96,6 +96,7 @@ namespace VideoRental
            }
 
 
+
         public string CustomerUpdate(string FName, string LName, string Mobile, string Address)
         {
             try
@@ -159,7 +160,82 @@ namespace VideoRental
                 }
             }
         }
+        public string MoviesInsert(string rating, string title, string year, string rental_cost, string copies, string polt, string genre)
+        {
+            try
+            {
+                Cmd.Parameters.Clear();
+                Cmd.Connection = Obj_Conn;
+                QueryString = "Insert into Movies(rating,title,year, rental_cost,copies,polt,genre) Values(@rating,@title,@year, @rental_cost@copies@polt@genre)";
+                Cmd.Parameters.AddWithValue("@rating", rating);
+                Cmd.Parameters.AddWithValue("@title", title);
+                Cmd.Parameters.AddWithValue("@year", year);
+                Cmd.Parameters.AddWithValue("@rental_cost", rental_cost);
+                Cmd.Parameters.AddWithValue("@copies", copies);
+                Cmd.Parameters.AddWithValue("@polt", polt);
+                Cmd.Parameters.AddWithValue("@genre", genre);
+               Cmd.CommandText = QueryString;
+                //connection opened
+                Obj_Conn.Open();
+                // Executed query
+                Cmd.ExecuteNonQuery();
+                return "Movies Data is Successfully done";
+            }
+            catch (Exception ex)
+            {
+                // show error Message
+                return ex.Message;
+            }
+            finally
+            {
+                // close connection
+                if (Obj_Conn != null)
+                {
+                    Obj_Conn.Close();
+                }
+            }
+        }
+        public string MoviesUpdate(string rating, string title, string year, string rental_cost, string copies, string polt, string genre)
+        {
+        {
+            try
+            {
+                Cmd.Parameters.Clear();
+                Cmd.Connection = Obj_Conn;
+                QueryString = "update Movies set FirstName = @FirstName,LastName = @LastName,Address = @Address, Phone = @Mobile where CustID =@CustID";
+                Cmd.Parameters.AddWithValue("@FirstName", FName);
+                Cmd.Parameters.AddWithValue("@LastName", LName);
+                Cmd.Parameters.AddWithValue("@Address", Address);
+                Cmd.Parameters.AddWithValue("@Mobile", Mobile);
+                Cmd.Parameters.AddWithValue("@CustID", CustomerID);
+                Cmd.CommandText = QueryString;
+                //connection opened
+                Obj_Conn.Open();
+                // Executed query
+                Cmd.ExecuteNonQuery();
+                return "Customer Data Updated Successfully";
+            }
+            catch (Exception ex)
+            {
+                // show error Message
+                return ex.Message;
+            }
+            finally
+            {
+                // close connection
+                if (Obj_Conn != null)
+                {
+                    Obj_Conn.Close();
+                }
+            }
+        }
+
+        
+
+
 
 
     }
 }
+
+ 

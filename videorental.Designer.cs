@@ -469,6 +469,7 @@
             this.Add_moive_details.TabIndex = 36;
             this.Add_moive_details.Text = "Add";
             this.Add_moive_details.UseVisualStyleBackColor = true;
+            this.Add_moive_details.Click += new System.EventHandler(this.Add_moive_details_Click);
             // 
             // Delete_movie_details
             // 
