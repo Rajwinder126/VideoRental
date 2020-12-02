@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="databaseClass.cs" />
+    <Compile Include="dbclass.cs" />
     <Compile Include="DGV_Rental.cs" />
     <Compile Include="videorental.cs">
       <SubType>Form</SubType>

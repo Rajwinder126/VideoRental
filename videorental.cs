@@ -12,7 +12,7 @@ namespace VideoRental
 {
     public partial class VideoRental : Form
     {
-        databaseClass Obj_Data = new databaseClass();
+        dbclass Obj_Data = new dbclass();
         public VideoRental()
         {
             InitializeComponent();
@@ -133,11 +133,13 @@ namespace VideoRental
             {
                 if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text != "" && Rental_cost_text.Text != "" && copies_text.Text != "" && polt_text.Text != "" && genre_text.Text != "")
                 {
-                    string message = Obj_Data.MoviesInsert(Title_text.Text, Year_text.Text, Rental_cost_text.Text, polt_text.Text, genre_text.Text);
+                    string message = Obj_Data.MoviesInsert(Rating_text.Text, Title_text.Text, Year_text.Text, Rental_cost_text.Text, copies_text.Text , polt_text.Text, genre_text.Text);
                     MessageBox.Show(message);
+                    Rating_text.Text = "";
                     Title_text.Text = "";
                     Year_text.Text = "";
                     Rental_cost_text.Text = "";
+                    copies_text.Text = "";
                     polt_text.Text = "";
                     genre_text.Text = "";
 
@@ -150,33 +152,77 @@ namespace VideoRental
 
             }
         }
-        
 
 
-            private void DGV_C_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void DGV_C_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
             {
-                try
-                {
-                    string newvalue = DGV_Customer.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                    this.Text = "Row : " + e.RowIndex.ToString() + " Col : " + e.ColumnIndex.ToString() + " Value = " + newvalue;
-                    Obj_Data.CustomerID = Convert.ToInt32(DGV_Customer.Rows[e.RowIndex].Cells[0].Value);
-                    Rating_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    Title_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    Year_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[4].Value.ToString();
-                    Rental_cost_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    polt_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    genre_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
-                   
-                   
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("somthing wrong", ex.Message);
-                }
-            }
+                string newvalue = DGV_Customer.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                this.Text = "Row : " + e.RowIndex.ToString() + " Col : " + e.ColumnIndex.ToString() + " Value = " + newvalue;
+                Obj_Data.CustomerID = Convert.ToInt32(DGV_Customer.Rows[e.RowIndex].Cells[0].Value);
+                Rating_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
+                Title_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
+                Year_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[4].Value.ToString();
+                Rental_cost_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[3].Value.ToString();
+                polt_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
+                genre_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("somthing wrong", ex.Message);
+            }
+        }
+
+        private void Update_moive_details_Click(object sender, EventArgs e)
+        {
+            if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text !="" && Rental_cost_text.Text != "" && copies_text.Text != "" && polt_text.Text !=""&& genre_text.Text !="")
+            {
+                string message = Obj_Data.CustomerUpdate(First_Name_Text.Text, Last_Name_Text.Text, Phone_Text.Text, Address_Text.Text);
+                MessageBox.Show(message);
+                Rating_text.Text = "";
+                Title_text.Text = "";
+                Year_text.Text = "";
+                Rental_cost_text.Text = "";
+                copies_text.Text = "";
+                polt_text.Text = "";
+                genre_text.Text = ""; 
+                Customer_Load();
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fileds then press update button");
+            }
+        }
+
+        private void Delete_movie_details_Click(object sender, EventArgs e)
+        {
+           
+                string message = Obj_Data.MoviesDelete();
+                MessageBox.Show(message);
+                Rating_text.Text = "";
+                Title_text.Text = "";
+                Year_text.Text = "";
+                Rental_cost_text.Text = "";
+                copies_text.Text = "";
+                polt_text.Text = "";
+                genre_text.Text = "";
+            
+                Customer_Load();
+            }
         }
     }
+
+
+        
+        
+    
+        
+    
+    
     
 
 

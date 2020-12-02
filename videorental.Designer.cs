@@ -479,6 +479,7 @@
             this.Delete_movie_details.TabIndex = 37;
             this.Delete_movie_details.Text = "Delete";
             this.Delete_movie_details.UseVisualStyleBackColor = true;
+            this.Delete_movie_details.Click += new System.EventHandler(this.Delete_movie_details_Click);
             // 
             // Update_moive_details
             // 
@@ -488,6 +489,7 @@
             this.Update_moive_details.TabIndex = 38;
             this.Update_moive_details.Text = "Update";
             this.Update_moive_details.UseVisualStyleBackColor = true;
+            this.Update_moive_details.Click += new System.EventHandler(this.Update_moive_details_Click);
             // 
             // First_Name_Text
             // 
@@ -568,7 +570,7 @@
             // 
             // polt_text
             // 
-            this.polt_text.Location = new System.Drawing.Point(724, 253);
+            this.polt_text.Location = new System.Drawing.Point(725, 253);
             this.polt_text.Name = "polt_text";
             this.polt_text.Size = new System.Drawing.Size(100, 20);
             this.polt_text.TabIndex = 52;
