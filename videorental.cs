@@ -133,7 +133,7 @@ namespace VideoRental
             {
                 if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text != "" && Rental_cost_text.Text != "" && copies_text.Text != "" && polt_text.Text != "" && genre_text.Text != "")
                 {
-                    string message = Obj_Data.MoviesInsert(Rating_text.Text, Title_text.Text, Year_text.Text, Rental_cost_text.Text, copies_text.Text , polt_text.Text, genre_text.Text);
+                    string message = Obj_Data.MoviesInsert(Rating_text.Text, Title_text.Text, Year_text.Text, Rental_cost_text.Text, copies_text.Text, polt_text.Text, genre_text.Text);
                     MessageBox.Show(message);
                     Rating_text.Text = "";
                     Title_text.Text = "";
@@ -179,7 +179,7 @@ namespace VideoRental
 
         private void Update_moive_details_Click(object sender, EventArgs e)
         {
-            if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text !="" && Rental_cost_text.Text != "" && copies_text.Text != "" && polt_text.Text !=""&& genre_text.Text !="")
+            if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text != "" && Rental_cost_text.Text != "" && copies_text.Text != "" && polt_text.Text != "" && genre_text.Text != "")
             {
                 string message = Obj_Data.CustomerUpdate(First_Name_Text.Text, Last_Name_Text.Text, Phone_Text.Text, Address_Text.Text);
                 MessageBox.Show(message);
@@ -189,7 +189,7 @@ namespace VideoRental
                 Rental_cost_text.Text = "";
                 copies_text.Text = "";
                 polt_text.Text = "";
-                genre_text.Text = ""; 
+                genre_text.Text = "";
                 Customer_Load();
             }
             else
@@ -200,8 +200,25 @@ namespace VideoRental
 
         private void Delete_movie_details_Click(object sender, EventArgs e)
         {
-           
-                string message = Obj_Data.MoviesDelete();
+
+            string message = Obj_Data.MoviesDelete();
+            MessageBox.Show(message);
+            Rating_text.Text = "";
+            Title_text.Text = "";
+            Year_text.Text = "";
+            Rental_cost_text.Text = "";
+            copies_text.Text = "";
+            polt_text.Text = "";
+            genre_text.Text = "";
+
+            Customer_Load();
+        }
+
+        private void issue_rental_details_Click(object sender, EventArgs e)
+        {
+            if (moviename_text.Text != "" && custname_text.Text != "")
+            {
+                string message = Obj_Data.IssueMovie(Convert.ToDateTime(date_rented_text.Text));
                 MessageBox.Show(message);
                 Rating_text.Text = "";
                 Title_text.Text = "";
@@ -210,20 +227,108 @@ namespace VideoRental
                 copies_text.Text = "";
                 polt_text.Text = "";
                 genre_text.Text = "";
-            
-                Customer_Load();
+                moviename_text.Text = "";
+                First_Name_Text.Text = "";
+                Last_Name_Text.Text = "";
+                Phone_Text.Text = "";
+                Address_Text.Text = "";
+                custname_text.Text = "";
+
+                Rental_Load();
+            }
+            else
+            {
+                // code to show the message if user did not fill all the details
+                MessageBox.Show("Please fill all the required details and add the new details by clicking Add button");
             }
         }
+
+        private void return_rental_details_Click(object sender, EventArgs e)
+        {
+            if (Title_text.Text != "" && custname_text.Text != "")
+            {
+                string message = Obj_Data.MovieReturn(Convert.ToDateTime(date_returned_text));
+                MessageBox.Show(message);
+                Rating_text.Text = "";
+                Title_text.Text = "";
+                Year_text.Text = "";
+                Rental_cost_text.Text = "";
+                copies_text.Text = "";
+                polt_text.Text = "";
+                genre_text.Text = "";
+                moviename_text.Text = "";
+                First_Name_Text.Text = "";
+                Last_Name_Text.Text = "";
+                Phone_Text.Text = "";
+                Address_Text.Text = "";
+                custname_text.Text = "";
+                Rental_Load();
+            }
+            else
+            {
+                // code to show the message if user did not fill all the details
+                MessageBox.Show("Please fill all the required details and add the new details by clicking Add button");
+            }
+        }
+
+        private void button_allrented_Click(object sender, EventArgs e)
+        {
+            Rental_Load();
+        }
+
+        private void button_rentalout_Click(object sender, EventArgs e)
+        {
+            DGV_Rental.DataSource = null;
+            try
+            {
+                DGV_Rental.DataSource = Obj_Data.RentedOut_Data();
+                DGV_Rental.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void Popular_Movie_Load()
+        {
+            DGV_popularMovie.DataSource = null;
+            try
+            {
+                DGV_popularMovie.DataSource = Obj_Data.FillPOPULARMOVIE();
+                DGV_popularMovie.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void Popular_Customer_Load()
+        {
+            DGV_popularCust.DataSource = null;
+            try
+            {
+                DGV_popularCust.DataSource = Obj_Data.FillPOPULARCUSTOMER();
+                DGV_popularCust.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
+}
 
 
-        
-        
-    
-        
-    
-    
-    
+
+
+
+
+
+
+
 
 
 
