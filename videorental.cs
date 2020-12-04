@@ -19,6 +19,8 @@ namespace VideoRental
             Customer_Load();
             Movies_Load();
             Rental_Load();
+            Popular_Movie_Load();
+            Popular_Customer_Load();
         }
         public void Customer_Load()
         {
@@ -131,16 +133,16 @@ namespace VideoRental
         private void Add_moive_details_Click(object sender, EventArgs e)
         {
             {
-                if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text != "" && Rental_cost_text.Text != "" && copies_text.Text != "" && polt_text.Text != "" && genre_text.Text != "")
+                if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text != "" && Rental_cost_text.Text != "" && copies_text.Text != "" && Plot_text.Text != "" && genre_text.Text != "")
                 {
-                    string message = Obj_Data.MoviesInsert(Rating_text.Text, Title_text.Text, Year_text.Text, Rental_cost_text.Text, copies_text.Text, polt_text.Text, genre_text.Text);
+                    string message = Obj_Data.MoviesInsert(Rating_text.Text, Title_text.Text, Year_text.Text, Rental_cost_text.Text, copies_text.Text, Plot_text.Text, genre_text.Text);
                     MessageBox.Show(message);
                     Rating_text.Text = "";
                     Title_text.Text = "";
                     Year_text.Text = "";
                     Rental_cost_text.Text = "";
                     copies_text.Text = "";
-                    polt_text.Text = "";
+                    Plot_text.Text = "";
                     genre_text.Text = "";
 
                     Movies_Load();
@@ -159,15 +161,16 @@ namespace VideoRental
         {
             try
             {
-                string newvalue = DGV_Customer.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                string newvalue = DGV_Movie.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                 this.Text = "Row : " + e.RowIndex.ToString() + " Col : " + e.ColumnIndex.ToString() + " Value = " + newvalue;
-                Obj_Data.CustomerID = Convert.ToInt32(DGV_Customer.Rows[e.RowIndex].Cells[0].Value);
-                Rating_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
-                Title_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
-                Year_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[4].Value.ToString();
-                Rental_cost_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[3].Value.ToString();
-                polt_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + DGV_Customer.Rows[e.RowIndex].Cells[2].Value.ToString();
-                genre_text.Text = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
+                Obj_Data.MoviesID = Convert.ToInt32(DGV_Customer.Rows[e.RowIndex].Cells[0].Value);
+                Rating_text.Text = DGV_Movie.Rows[e.RowIndex].Cells[1].Value.ToString();
+                Title_text.Text = DGV_Movie.Rows[e.RowIndex].Cells[2].Value.ToString();
+                Year_text.Text = DGV_Movie.Rows[e.RowIndex].Cells[3].Value.ToString();
+                Rental_cost_text.Text = DGV_Movie.Rows[e.RowIndex].Cells[4].Value.ToString();
+                copies_text.Text = DGV_Movie.Rows[e.RowIndex].Cells[5].Value.ToString();
+                 Plot_text.Text = DGV_Movie.Rows[e.RowIndex].Cells[6].Value.ToString();
+                genre_text.Text = DGV_Movie.Rows[e.RowIndex].Cells[7].Value.ToString();
 
 
             }
@@ -179,24 +182,27 @@ namespace VideoRental
 
         private void Update_moive_details_Click(object sender, EventArgs e)
         {
-            if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text != "" && Rental_cost_text.Text != "" && copies_text.Text != "" && polt_text.Text != "" && genre_text.Text != "")
+            if (Rating_text.Text != "" && Title_text.Text != "" && Year_text.Text != "" && Rental_cost_text.Text != "" && copies_text.Text != "" && Plot_text.Text != "" && genre_text.Text != "")
             {
-                string message = Obj_Data.CustomerUpdate(First_Name_Text.Text, Last_Name_Text.Text, Phone_Text.Text, Address_Text.Text);
+                string message = Obj_Data.MoviesUpdate(Rating_text.Text, Title_text.Text, Year_text.Text, Rental_cost_text.Text, copies_text.Text, Plot_text.Text, genre_text.Text);
                 MessageBox.Show(message);
                 Rating_text.Text = "";
                 Title_text.Text = "";
                 Year_text.Text = "";
                 Rental_cost_text.Text = "";
                 copies_text.Text = "";
-                polt_text.Text = "";
+                Plot_text.Text = "";
                 genre_text.Text = "";
-                Customer_Load();
+                Movies_Load();
             }
             else
             {
-                MessageBox.Show("Please fill all the fileds then press update button");
+                // code to show the message if user did not fill all the details
+                MessageBox.Show("Please fill all the required details and add the new details by clicking Add button");
             }
+
         }
+
 
         private void Delete_movie_details_Click(object sender, EventArgs e)
         {
@@ -208,10 +214,10 @@ namespace VideoRental
             Year_text.Text = "";
             Rental_cost_text.Text = "";
             copies_text.Text = "";
-            polt_text.Text = "";
+            Plot_text.Text = "";
             genre_text.Text = "";
 
-            Customer_Load();
+            Movies_Load();
         }
 
         private void issue_rental_details_Click(object sender, EventArgs e)
@@ -225,7 +231,7 @@ namespace VideoRental
                 Year_text.Text = "";
                 Rental_cost_text.Text = "";
                 copies_text.Text = "";
-                polt_text.Text = "";
+                Plot_text.Text = "";
                 genre_text.Text = "";
                 moviename_text.Text = "";
                 First_Name_Text.Text = "";
@@ -254,7 +260,7 @@ namespace VideoRental
                 Year_text.Text = "";
                 Rental_cost_text.Text = "";
                 copies_text.Text = "";
-                polt_text.Text = "";
+                Plot_text.Text = "";
                 genre_text.Text = "";
                 moviename_text.Text = "";
                 First_Name_Text.Text = "";
@@ -290,13 +296,15 @@ namespace VideoRental
             }
         }
 
-        public void Popular_Movie_Load()
+       
+
+        public void Popular_Customer_Load()
         {
-            DGV_popularMovie.DataSource = null;
+            DGV_popularCust.DataSource = null;
             try
             {
-                DGV_popularMovie.DataSource = Obj_Data.FillPOPULARMOVIE();
-                DGV_popularMovie.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                DGV_popularCust.DataSource = Obj_Data.FillPOPULARCUST();
+                DGV_popularCust.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             }
             catch (Exception ex)
             {
@@ -304,13 +312,13 @@ namespace VideoRental
             }
         }
 
-        public void Popular_Customer_Load()
+        public void Popular_Movie_Load()
         {
-            DGV_popularCust.DataSource = null;
+            DGV_popularMovie.DataSource = null;
             try
             {
-                DGV_popularCust.DataSource = Obj_Data.FillPOPULARCUSTOMER();
-                DGV_popularCust.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                DGV_popularMovie.DataSource = Obj_Data.FillPOPULARMOVIE();
+                DGV_popularMovie.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             }
             catch (Exception ex)
             {

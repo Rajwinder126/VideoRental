@@ -36,7 +36,9 @@
             this.Rent_tab = new System.Windows.Forms.TabPage();
             this.DGV_Rental = new System.Windows.Forms.DataGridView();
             this.most_popular_movie = new System.Windows.Forms.TabPage();
+            this.DGV_popularMovie = new System.Windows.Forms.DataGridView();
             this.most_popular_costumer = new System.Windows.Forms.TabPage();
+            this.DGV_popularCust = new System.Windows.Forms.DataGridView();
             this.Moive_penal = new System.Windows.Forms.PictureBox();
             this.customer_penal = new System.Windows.Forms.PictureBox();
             this.Customer_details = new System.Windows.Forms.TextBox();
@@ -48,7 +50,7 @@
             this.Year_label = new System.Windows.Forms.Label();
             this.Rental_cost_label = new System.Windows.Forms.Label();
             this.Copies_label = new System.Windows.Forms.Label();
-            this.Polt_label = new System.Windows.Forms.Label();
+            this.Plot_label = new System.Windows.Forms.Label();
             this.Genre_label = new System.Windows.Forms.Label();
             this.Rating_label = new System.Windows.Forms.Label();
             this.Title_label = new System.Windows.Forms.Label();
@@ -79,14 +81,12 @@
             this.Year_text = new System.Windows.Forms.TextBox();
             this.Rental_cost_text = new System.Windows.Forms.TextBox();
             this.copies_text = new System.Windows.Forms.TextBox();
-            this.polt_text = new System.Windows.Forms.TextBox();
+            this.Plot_text = new System.Windows.Forms.TextBox();
             this.genre_text = new System.Windows.Forms.TextBox();
             this.date_returned_text = new System.Windows.Forms.DateTimePicker();
             this.date_rented_text = new System.Windows.Forms.DateTimePicker();
             this.button_allrented = new System.Windows.Forms.Button();
             this.button_rentalout = new System.Windows.Forms.Button();
-            this.DGV_popularMovie = new System.Windows.Forms.DataGridView();
-            this.DGV_popularCust = new System.Windows.Forms.DataGridView();
             this.video_rental.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Customer)).BeginInit();
@@ -95,12 +95,12 @@
             this.Rent_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Rental)).BeginInit();
             this.most_popular_movie.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_popularMovie)).BeginInit();
             this.most_popular_costumer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_popularCust)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Moive_penal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer_penal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rental_penal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_popularMovie)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_popularCust)).BeginInit();
             this.SuspendLayout();
             // 
             // video_rental
@@ -155,6 +155,8 @@
             this.DGV_Movie.Name = "DGV_Movie";
             this.DGV_Movie.Size = new System.Drawing.Size(489, 241);
             this.DGV_Movie.TabIndex = 0;
+            this.DGV_Movie.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_C_CellContentClick);
+            this.DGV_Movie.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_C_CellContentClick);
             // 
             // Rent_tab
             // 
@@ -187,6 +189,14 @@
             this.most_popular_movie.Text = "Most Popular_Movie";
             this.most_popular_movie.UseVisualStyleBackColor = true;
             // 
+            // DGV_popularMovie
+            // 
+            this.DGV_popularMovie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_popularMovie.Location = new System.Drawing.Point(26, 10);
+            this.DGV_popularMovie.Name = "DGV_popularMovie";
+            this.DGV_popularMovie.Size = new System.Drawing.Size(439, 237);
+            this.DGV_popularMovie.TabIndex = 0;
+            // 
             // most_popular_costumer
             // 
             this.most_popular_costumer.Controls.Add(this.DGV_popularCust);
@@ -197,6 +207,14 @@
             this.most_popular_costumer.TabIndex = 4;
             this.most_popular_costumer.Text = "Most Popular Costumer";
             this.most_popular_costumer.UseVisualStyleBackColor = true;
+            // 
+            // DGV_popularCust
+            // 
+            this.DGV_popularCust.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_popularCust.Location = new System.Drawing.Point(16, 20);
+            this.DGV_popularCust.Name = "DGV_popularCust";
+            this.DGV_popularCust.Size = new System.Drawing.Size(463, 218);
+            this.DGV_popularCust.TabIndex = 0;
             // 
             // Moive_penal
             // 
@@ -307,16 +325,16 @@
             this.Copies_label.TabIndex = 16;
             this.Copies_label.Text = "Copies";
             // 
-            // Polt_label
+            // Plot_label
             // 
-            this.Polt_label.AutoSize = true;
-            this.Polt_label.BackColor = System.Drawing.Color.DarkGray;
-            this.Polt_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Polt_label.Location = new System.Drawing.Point(574, 253);
-            this.Polt_label.Name = "Polt_label";
-            this.Polt_label.Size = new System.Drawing.Size(28, 15);
-            this.Polt_label.TabIndex = 17;
-            this.Polt_label.Text = "Polt";
+            this.Plot_label.AutoSize = true;
+            this.Plot_label.BackColor = System.Drawing.Color.DarkGray;
+            this.Plot_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Plot_label.Location = new System.Drawing.Point(574, 253);
+            this.Plot_label.Name = "Plot_label";
+            this.Plot_label.Size = new System.Drawing.Size(28, 15);
+            this.Plot_label.TabIndex = 17;
+            this.Plot_label.Text = "Plot";
             // 
             // Genre_label
             // 
@@ -595,12 +613,12 @@
             this.copies_text.Size = new System.Drawing.Size(100, 20);
             this.copies_text.TabIndex = 51;
             // 
-            // polt_text
+            // Plot_text
             // 
-            this.polt_text.Location = new System.Drawing.Point(725, 253);
-            this.polt_text.Name = "polt_text";
-            this.polt_text.Size = new System.Drawing.Size(100, 20);
-            this.polt_text.TabIndex = 52;
+            this.Plot_text.Location = new System.Drawing.Point(725, 253);
+            this.Plot_text.Name = "Plot_text";
+            this.Plot_text.Size = new System.Drawing.Size(100, 20);
+            this.Plot_text.TabIndex = 52;
             // 
             // genre_text
             // 
@@ -643,22 +661,6 @@
             this.button_rentalout.UseVisualStyleBackColor = true;
             this.button_rentalout.Click += new System.EventHandler(this.button_rentalout_Click);
             // 
-            // DGV_popularMovie
-            // 
-            this.DGV_popularMovie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_popularMovie.Location = new System.Drawing.Point(26, 10);
-            this.DGV_popularMovie.Name = "DGV_popularMovie";
-            this.DGV_popularMovie.Size = new System.Drawing.Size(439, 237);
-            this.DGV_popularMovie.TabIndex = 0;
-            // 
-            // DGV_popularCust
-            // 
-            this.DGV_popularCust.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_popularCust.Location = new System.Drawing.Point(16, 20);
-            this.DGV_popularCust.Name = "DGV_popularCust";
-            this.DGV_popularCust.Size = new System.Drawing.Size(463, 218);
-            this.DGV_popularCust.TabIndex = 0;
-            // 
             // VideoRental
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,7 +672,7 @@
             this.Controls.Add(this.date_rented_text);
             this.Controls.Add(this.date_returned_text);
             this.Controls.Add(this.genre_text);
-            this.Controls.Add(this.polt_text);
+            this.Controls.Add(this.Plot_text);
             this.Controls.Add(this.copies_text);
             this.Controls.Add(this.Rental_cost_text);
             this.Controls.Add(this.Year_text);
@@ -701,7 +703,7 @@
             this.Controls.Add(this.Title_label);
             this.Controls.Add(this.Rating_label);
             this.Controls.Add(this.Genre_label);
-            this.Controls.Add(this.Polt_label);
+            this.Controls.Add(this.Plot_label);
             this.Controls.Add(this.Copies_label);
             this.Controls.Add(this.Rental_cost_label);
             this.Controls.Add(this.Year_label);
@@ -725,12 +727,12 @@
             this.Rent_tab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Rental)).EndInit();
             this.most_popular_movie.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_popularMovie)).EndInit();
             this.most_popular_costumer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_popularCust)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Moive_penal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customer_penal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rental_penal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_popularMovie)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_popularCust)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -756,7 +758,7 @@
         private System.Windows.Forms.Label Year_label;
         private System.Windows.Forms.Label Rental_cost_label;
         private System.Windows.Forms.Label Copies_label;
-        private System.Windows.Forms.Label Polt_label;
+        private System.Windows.Forms.Label Plot_label;
         private System.Windows.Forms.Label Genre_label;
         private System.Windows.Forms.Label Rating_label;
         private System.Windows.Forms.Label Title_label;
@@ -787,7 +789,7 @@
         private System.Windows.Forms.TextBox Year_text;
         private System.Windows.Forms.TextBox Rental_cost_text;
         private System.Windows.Forms.TextBox copies_text;
-        private System.Windows.Forms.TextBox polt_text;
+        private System.Windows.Forms.TextBox Plot_text;
         private System.Windows.Forms.TextBox genre_text;
         private System.Windows.Forms.DateTimePicker date_returned_text;
         private System.Windows.Forms.DateTimePicker date_rented_text;

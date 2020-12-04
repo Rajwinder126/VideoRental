@@ -160,20 +160,21 @@ namespace VideoRental
                 }
             }
         }
-        public string MoviesInsert(string rating, string title, string year, string rental_cost, string copies, string polt, string genre)
+        public string MoviesInsert(string rating, string title, string year, string rental_cost, string copies, string plot, string genre)
         {
             try
             {
                 Cmd.Parameters.Clear();
                 Cmd.Connection = Obj_Conn;
-                QueryString = "Insert into Movies(rating,title,year, rental_cost,copies,polt,genre) Values(@rating,@title,@year,@rental_cost,@copies,@polt,@genre)";
+                QueryString = "Insert into Movies(rating,title,year, rental_cost,copies,Plot,genre) Values(@rating,@title,@year,@rental_cost,@copies,@plot,@genre)";
                 Cmd.Parameters.AddWithValue("@rating", rating);
                 Cmd.Parameters.AddWithValue("@title", title);
                 Cmd.Parameters.AddWithValue("@year", year);
                 Cmd.Parameters.AddWithValue("@rental_cost", rental_cost);
                 Cmd.Parameters.AddWithValue("@copies", copies);
-                Cmd.Parameters.AddWithValue("@polt", polt);
+                Cmd.Parameters.AddWithValue("@Plot", plot);
                 Cmd.Parameters.AddWithValue("@genre", genre);
+                Cmd.Parameters.AddWithValue("@MoviesID", MoviesID);
                 Cmd.CommandText = QueryString;
                 //connection opened
                 Obj_Conn.Open();
@@ -197,21 +198,22 @@ namespace VideoRental
 
 
         }
-        public string MoviesUpdate(string rating, string title, string year, string rental_cost, string copies, string polt, string genre)
+        public string MoviesUpdate(string rating, string title, string year, string rental_cost, string copies, string plot, string genre)
         {
             {
                 try
                 {
                     Cmd.Parameters.Clear();
                     Cmd.Connection = Obj_Conn;
-                    QueryString = "update Movies set rating = @rating,title = @title,year = @year, rental_cost = @rental_cost,copies = @copies,polt = @polt,genre = @genre where moviesID =@moviesID";
+                    QueryString = "update Movies set rating = @rating,title = @title,year = @year, rental_cost = @rental_cost,copies = @copies,Plot = @plot,genre = @genre where MoviesID =@MoviesID";
                     Cmd.Parameters.AddWithValue("@rating", rating);
                     Cmd.Parameters.AddWithValue("@title", title);
                     Cmd.Parameters.AddWithValue("@year", year);
                     Cmd.Parameters.AddWithValue("@rental_cost", rental_cost);
                     Cmd.Parameters.AddWithValue("@copies", copies);
-                    Cmd.Parameters.AddWithValue("@polt", polt);
+                    Cmd.Parameters.AddWithValue("@Plot", plot);
                     Cmd.Parameters.AddWithValue("@genre", genre);
+                    Cmd.Parameters.AddWithValue("@MoviesID", MoviesID);
                     Cmd.CommandText = QueryString;
                     //connection opened
                     Obj_Conn.Open();
@@ -270,9 +272,9 @@ namespace VideoRental
             {
                 Cmd.Parameters.Clear();
                 Cmd.Connection = Obj_Conn;
-                QueryString = "Insert into RentedMovies(MovieIDFK,CustIDFK,DateRented,DateReturned) values(@MovieID,@CustID,@Issue_date,Null)";
+                QueryString = "Insert into RentedMovies(MovieIDFK,CustIDFK,DateRented,DateReturned) values(@MoviesID,@CustID,@Issue_date,Null)";
                 Cmd.Parameters.AddWithValue("@CustID", CustomerID);
-                Cmd.Parameters.AddWithValue("@MovieID", MoviesID);
+                Cmd.Parameters.AddWithValue("@MoviesID", MoviesID);
                 Cmd.Parameters.AddWithValue("@Issue_date", Issue_date);
                 Cmd.CommandText = QueryString;
                 //connection opened
@@ -354,7 +356,7 @@ namespace VideoRental
             return dt;
         }
 
-        public DataTable FillPOPULARCUSTOMER()
+        public DataTable FillPOPULARCUST()
         {
             DataTable dt = new DataTable();
             QueryString = "select * From POPULARCUST";
