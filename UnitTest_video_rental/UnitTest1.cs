@@ -21,10 +21,10 @@ namespace UnitTesting_vedioRental
 
         //code is to check valid Test Case of connection String
         [TestMethod]
-        public void Test_deleteMovie()
+        public void Test_deletecostumer()
         {
             string Message = Obj_Data.costumerDelete();
-            Assert.AreEqual("costumer Details are filled properly", Message);
+            Assert.AreEqual("All costumer details are filled properly", Message);
         }
 
         private class ClassDatabase
