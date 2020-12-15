@@ -204,7 +204,7 @@ namespace VideoRental
         }
 
 
-        private void Delete_movie_details_Click(object sender, EventArgs e)
+        public void Delete_movie_details_Click(object sender, EventArgs e)
         {
 
             string message = Obj_Data.MoviesDelete();

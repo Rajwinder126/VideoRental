@@ -12,7 +12,7 @@ namespace VideoRental
     {
         private SqlConnection Obj_Conn = new SqlConnection();
         private SqlCommand Cmd = new SqlCommand();
-        private SqlDataReader Data_Reader;
+        private readonly SqlDataReader Data_Reader;
         private SqlDataAdapter da = new SqlDataAdapter();
         string QueryString;
         public int CustomerID, MoviesID,RentalID;
@@ -205,7 +205,7 @@ namespace VideoRental
                 {
                     Cmd.Parameters.Clear();
                     Cmd.Connection = Obj_Conn;
-                    QueryString = "update Movies set rating = @rating,title = @title,year = @year, rental_cost = @rental_cost,copies = @copies,Plot = @plot,genre = @genre where MoviesID =@MoviesID";
+                    QueryString = "update Movies set rating = @rating,title = @title,year = @year, rental_cost = @rental_cost,copies = @copies,Plot = @plot,genre = @genre where MovieID =@MovieID";
                     Cmd.Parameters.AddWithValue("@rating", rating);
                     Cmd.Parameters.AddWithValue("@title", title);
                     Cmd.Parameters.AddWithValue("@year", year);
@@ -213,7 +213,7 @@ namespace VideoRental
                     Cmd.Parameters.AddWithValue("@copies", copies);
                     Cmd.Parameters.AddWithValue("@Plot", plot);
                     Cmd.Parameters.AddWithValue("@genre", genre);
-                    Cmd.Parameters.AddWithValue("@MoviesID", MoviesID);
+                    Cmd.Parameters.AddWithValue("@MovieID", MoviesID);
                     Cmd.CommandText = QueryString;
                     //connection opened
                     Obj_Conn.Open();
@@ -242,8 +242,8 @@ namespace VideoRental
                {
                  Cmd.Parameters.Clear();
                  Cmd.Connection = Obj_Conn;
-                 QueryString = "Delete from Movies where MoviesID =@MoviesID";
-                 Cmd.Parameters.AddWithValue("@MoviesID", MoviesID);
+                 QueryString = "Delete from Movies where MovieID =@MovieID";
+                 Cmd.Parameters.AddWithValue("@MovieID", MoviesID);
                  Cmd.CommandText = QueryString;
                 //connection opened
                 Obj_Conn.Open();
